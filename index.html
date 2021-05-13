@@ -1,66 +1,39 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>CV Rafli</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Card</title>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='app.js'></script>
-    <link rel='stylesheet' type='text/css' media='screen' href='responsive.css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
+    
 </head>
-
 <body>
-    <!-- bikin header + nav -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="logo">
-                    <a href="#">
-                        <img src="img/r logo 1.png" alt="logo">
-                    </a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="">About me</a></li>
-                        <li><a href="">Experience</a></li>
-                        <li><a class="call" href="">Download CV</span></a></li>
-                    </ul>
-                </nav>
-                <span class="fa fa-bars"></span>
+    <main>
+        <header>
+            <div class="container">
+                <p class="title">Eid Card</p>
             </div>
-
-        </div>
-    </header>
-    <!-- bikin header + nav finish-->
-    <section class="home" id="home">
-        <div class="container cover">
-            <div class="row">
-                <div class="photos">
-                    <img src="img/profile.png" alt="rafli">
-                </div>
-                <div class="block">
-                    <h6>Hai, Aku</h6>
-                    <h1>Muhammad</h1>
-                    <h1>Rafli</h1>
-                    <p>Mahasiswa Agroindustri</p>
-                    <div class="button">
-                        <div class="row">
-                            <div class="btn-download">
-                                <a href="#">Download CV</a>
-                            </div>
-                            <div class="btn-contact">
-                                <a href="#">Contact</a>
-                            </div>
-                        </div>
+        </header>
+        <section class="input">
+            <div class="container">
+                <div class="input-box">
+                    <div class="input-text">
+                        <p>Sebutin dulu nama panggilan kamu sebelum membuka ini</p >
+                        <br>
+                    <input type="text" value="kamu" id="nama-input">
+                    <button type="button" class='btn'>Cetak</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <article class="real-card">
+            
+        </article>
+        
+    </main>
+    <script src="app.js"></script>
 </body>
+
 </html>
+
