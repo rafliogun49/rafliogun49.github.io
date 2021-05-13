@@ -26,7 +26,7 @@ function showName() {
         <div class="eid-text">
             <p class="text-info">
                 Haiii ${name}, gimana kabarnya sekarang?<br>
-                Semoga hari ini kamu bahagia yaaa, karena sekarang bisa ngerasain lagi nikmatnya makan siang hehe.
+                Semoga hari ini kamu tengah diliputi kebahagiaan yaaa.
             </p>
             <p class="text-info">
                 Di momen hari raya ini aku mau ngucapin selamat hari raya idul fitri. Semoga shaum pada bulan 
