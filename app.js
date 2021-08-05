@@ -1,54 +1,40 @@
-const btn = document.querySelector('.btn');
-const content = document.querySelector('.real-card');
-btn.addEventListener('click', showName);
+const accumulativeCharacter = document.getElementById('accumulativeCharacter');
+const residualCharacter = document.getElementById('residualCharacter');
+const twitterForm = document.getElementById('twitter');
+const twitterText = document.getElementById('twitterText');
+const copyButton = document.getElementById('copyButton');
+const deleteButton = document.getElementById('deleteButton');
 
-function showName() {
-    let name = document.querySelector('#nama-input').value;
-    const text = `<section class="card-box">
-    <div class="container">
-        <div class="card">
-            <div class="card-content">
-                <div class="card-image">
-                    <img src="teuing_ah_1-removebg-preview.png" alt="gambar">
-                </div>
-                <div class="card-text-container">
-                    <div class="card-text">
-                        <p class="greet">Halooo ${name}</p>
-                        <p class="eid">Selamat Hari Raya Idul Fitri yaaa</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="text-content">
-    <div class="container">
-        <div class="eid-text">
-            <p class="text-info">
-                Haiii ${name}, gimana kabarnya sekarang?<br>
-                Semoga hari ini kamu tengah diliputi kebahagiaan yaaa.
-            </p>
-            <p class="text-info">
-                Di momen hari raya ini aku mau ngucapin selamat hari raya idul fitri. Semoga shaum pada bulan 
-                Ramadhan tahun ini dapat membawa perubahan bagi diri kita, 
-                minimal dapat merubah sedikit berat badan kita wkwk. 
-            </p>
-            <p class="text-info">
-                Aku juga pengen minta maaf nih ke ${name}
-                 kalo ada perilaku dan tutur kata
-                 yang tidak berkenan di hati. 
-                 Namanya juga manusia, pasti pernah khilaf.
-            </p>
-            <p class="text-info">
-                Thanks udah baca card ini, semoga kamu sehat
-                 selalu dan tetap semangat menghadapi kehidupan yaaa
-            </p>
-            <p class="text-info">
-                Salam hangat untuk ${name}<br>
-                Dari Muhammad Rafli
-            </p>
-        </div>
-    </div>
-</section>`;
-return content.innerHTML = text;
+twitterText.addEventListener('input', () => {
+    const totalText = twitterText.value.length;
+    textSetting(totalText);
+});
+function textSetting(totalText) {
+    const residualText = 280 - totalText;
+    accumulativeCharacter.innerHTML = totalText;
+    residualCharacter.innerHTML = residualText;
+
+    if (totalText > 280) {
+        accumulativeCharacter.style.background = '#fff';
+        residualCharacter.style.background = '#fff';
+        accumulativeCharacter.style.color = '#ff4c29';
+        residualCharacter.style.color = '#ff4c29';
+        accumulativeCharacter.style.borderRadius = '10px';
+        residualCharacter.style.borderRadius = '10px';
+    } else {
+        accumulativeCharacter.style.background = 'none';
+        residualCharacter.style.background = 'none';
+        accumulativeCharacter.style.color = '#fff';
+        residualCharacter.style.color = '#fff';
+    }
+}
+function deleteText() {
+    twitterText.value = '';
+    const totalText = 0;
+    textSetting(totalText);
+}
+function copyText() {
+    twitterText.select();
+    document.execCommand("copy");
+    alert("Copy text was successful");
 }
